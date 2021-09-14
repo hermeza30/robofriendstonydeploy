@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/hermeza30/robofriendstonydeploy/static/css/main.2f89c7ba.chunk.css",
-    "main.js": "/hermeza30/robofriendstonydeploy/static/js/main.9a7fb75c.chunk.js",
-    "main.js.map": "/hermeza30/robofriendstonydeploy/static/js/main.9a7fb75c.chunk.js.map",
-    "runtime-main.js": "/hermeza30/robofriendstonydeploy/static/js/runtime-main.d025d108.js",
-    "runtime-main.js.map": "/hermeza30/robofriendstonydeploy/static/js/runtime-main.d025d108.js.map",
-    "static/css/2.6d7c7915.chunk.css": "/hermeza30/robofriendstonydeploy/static/css/2.6d7c7915.chunk.css",
-    "static/js/2.7d6a1cf1.chunk.js": "/hermeza30/robofriendstonydeploy/static/js/2.7d6a1cf1.chunk.js",
-    "static/js/2.7d6a1cf1.chunk.js.map": "/hermeza30/robofriendstonydeploy/static/js/2.7d6a1cf1.chunk.js.map",
-    "static/js/3.c2857775.chunk.js": "/hermeza30/robofriendstonydeploy/static/js/3.c2857775.chunk.js",
-    "static/js/3.c2857775.chunk.js.map": "/hermeza30/robofriendstonydeploy/static/js/3.c2857775.chunk.js.map",
-    "index.html": "/hermeza30/robofriendstonydeploy/index.html",
-    "static/css/2.6d7c7915.chunk.css.map": "/hermeza30/robofriendstonydeploy/static/css/2.6d7c7915.chunk.css.map",
-    "static/css/main.2f89c7ba.chunk.css.map": "/hermeza30/robofriendstonydeploy/static/css/main.2f89c7ba.chunk.css.map",
-    "static/js/2.7d6a1cf1.chunk.js.LICENSE.txt": "/hermeza30/robofriendstonydeploy/static/js/2.7d6a1cf1.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/hermeza30/robofriendstonydeploy/static/media/SEGA.47b4bfa9.woff"
+    "main.css": "/robofriendstonydeploy/static/css/main.044f7680.chunk.css",
+    "main.js": "/robofriendstonydeploy/static/js/main.9a7fb75c.chunk.js",
+    "main.js.map": "/robofriendstonydeploy/static/js/main.9a7fb75c.chunk.js.map",
+    "runtime-main.js": "/robofriendstonydeploy/static/js/runtime-main.b8e934f1.js",
+    "runtime-main.js.map": "/robofriendstonydeploy/static/js/runtime-main.b8e934f1.js.map",
+    "static/css/2.6d7c7915.chunk.css": "/robofriendstonydeploy/static/css/2.6d7c7915.chunk.css",
+    "static/js/2.7d6a1cf1.chunk.js": "/robofriendstonydeploy/static/js/2.7d6a1cf1.chunk.js",
+    "static/js/2.7d6a1cf1.chunk.js.map": "/robofriendstonydeploy/static/js/2.7d6a1cf1.chunk.js.map",
+    "static/js/3.c2857775.chunk.js": "/robofriendstonydeploy/static/js/3.c2857775.chunk.js",
+    "static/js/3.c2857775.chunk.js.map": "/robofriendstonydeploy/static/js/3.c2857775.chunk.js.map",
+    "index.html": "/robofriendstonydeploy/index.html",
+    "static/css/2.6d7c7915.chunk.css.map": "/robofriendstonydeploy/static/css/2.6d7c7915.chunk.css.map",
+    "static/css/main.044f7680.chunk.css.map": "/robofriendstonydeploy/static/css/main.044f7680.chunk.css.map",
+    "static/js/2.7d6a1cf1.chunk.js.LICENSE.txt": "/robofriendstonydeploy/static/js/2.7d6a1cf1.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/robofriendstonydeploy/static/media/SEGA.47b4bfa9.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.d025d108.js",
+    "static/js/runtime-main.b8e934f1.js",
     "static/css/2.6d7c7915.chunk.css",
     "static/js/2.7d6a1cf1.chunk.js",
-    "static/css/main.2f89c7ba.chunk.css",
+    "static/css/main.044f7680.chunk.css",
     "static/js/main.9a7fb75c.chunk.js"
   ]
 }
