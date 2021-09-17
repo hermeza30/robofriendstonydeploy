@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import './index.css';
 // import Hello from './Hello';
 import reportWebVitals from './reportWebVitals';
@@ -7,7 +9,9 @@ import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 
 import App from './containers/App'
+import { searchRobots } from './reducers';
 
+const store= createStore(searchRobots);
 ReactDOM.render(
   <React.StrictMode>
    {/* <Hellow2 greeting={'Hola hermano como estas'}/> */}
@@ -17,7 +21,9 @@ ReactDOM.render(
         <Card id={robots[2].id} name={robots[2].name} email={robots[2].email}/>
         <Card id={robots[3].id} name={robots[3].name} email={robots[3].email}/>
      </div> */}
-    <App/>
+    <Provider store={store}>
+      <App/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
