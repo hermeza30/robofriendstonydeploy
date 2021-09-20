@@ -5,7 +5,7 @@ import SearchBox from '../components/SearchBox';
 import './App.css';
 import Scroll from '../components/Scroll'
 import ErrorBoundry from '../components/ErrorBoundary';
-import {setSearchField} from '../action';
+import {setSearchField,requestRobots} from '../action';
 
 // export default class App extends Component{
 
@@ -50,29 +50,36 @@ import {setSearchField} from '../action';
 //  }
 const mapStateToProps=state=>{
     return {
-        searchField:state.searchField//toma el state
+        searchField:state.searchRobots.searchField,//toma el state
+        robots:state.requestRobots.robots,
+        isPending:state.requestRobots.isPending,
+        error:state.requestRobots.error
     }
 }
 const mapDispatcherProps = ( dispatch )=>({
-    onSearchChange: (event) => dispatch( setSearchField( event.target.value ) )//Dispara la accion
+    onSearchChange: (event) => dispatch( setSearchField( event.target.value ) ),//Dispara la accion. Pasa al dispatch un objeto
+    onRequestRobots: (event) => dispatch( requestRobots() )//Dispara la accion//Pasa al dispatch una function
 });
 function App(props){
     console.log("Props",props)
-    const [robots,setRobots]=useState([]);
+    // const [robots,setRobots]=useState([]);
     const [count, setCount]=useState(0);
-    const {searchField,onSearchChange}=props;
+    const {searchField,onSearchChange,robots,isPending}=props;
+    // useEffect(()=>{
+    //    fetch('https://jsonplaceholder.typicode.com/users').then((res)=>res.json()).then((res)=>{
+    //        setRobots(res);
+    //        console.log("count",count)
+    //        }).catch(console.log)
+    // },[count]);
     useEffect(()=>{
-       fetch('https://jsonplaceholder.typicode.com/users').then((res)=>res.json()).then((res)=>{
-           setRobots(res);
-           console.log("count",count)
-           }).catch(console.log)
-    },[count]);
+        props.onRequestRobots();
+    },[]);
 
 
     const filteredRobots=robots.filter(
         x=>x.name.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
         );
-    if(!robots.length){
+    if(isPending){
         return <h1>Loading!...</h1>
     }else{
         return (
