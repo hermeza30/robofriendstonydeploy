@@ -4,10 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore , applyMiddleware,combineReducers} from 'redux';
 import { createLogger, } from 'redux-logger';
 import  thunkMiddleware  from 'redux-thunk';
-import './index.css';
-// import Hello from './Hello';
 import reportWebVitals from './reportWebVitals';
-// import Hellow2 from './Hello2';
+import './index.css';
 import 'tachyons';
 
 import App from './containers/App'
@@ -18,13 +16,6 @@ const rootReducer=combineReducers({searchRobots,requestRobots})
 const store= createStore(rootReducer,applyMiddleware( thunkMiddleware,logger ));
 ReactDOM.render(
   <React.StrictMode>
-   {/* <Hellow2 greeting={'Hola hermano como estas'}/> */}
-   {/* <div>
-        <Card id={robots[0].id} name={robots[0].name} email={robots[0].email}/>
-        <Card id={robots[1].id} name={robots[1].name} email={robots[1].email}/>
-        <Card id={robots[2].id} name={robots[2].name} email={robots[2].email}/>
-        <Card id={robots[3].id} name={robots[3].name} email={robots[3].email}/>
-     </div> */}
     <Provider store={store}>
       <App/>
     </Provider>
