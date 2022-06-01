@@ -6,6 +6,7 @@ import './App.css';
 import Scroll from '../components/Scroll'
 import ErrorBoundry from '../components/ErrorBoundary';
 import {setSearchField,requestRobots} from '../action';
+import Header from '../components/Header';
 
 const mapStateToProps=state=>{
     return {
@@ -19,6 +20,7 @@ const mapDispatcherProps = ( dispatch )=>({
     onSearchChange: (event) => dispatch( setSearchField( event.target.value ) ),//Dispara la accion. Pasa al dispatch un objeto
     onRequestRobots: (event) => dispatch( requestRobots() )//Dispara la accion//Pasa al dispatch una function
 });
+
 function App(props){
 
     const [count, setCount]=useState(0);
@@ -38,8 +40,8 @@ function App(props){
     }else{
         return (
         <div className="tc">
-            <h1 className="f2">Robo-Tony-Friends</h1>
-            <button onClick={()=>setCount(count+1)}>ClickMe</button>
+            <Header/>
+            {/* <button onClick={()=>setCount(count+1)}>ClickMe</button> */}
             <SearchBox searchChange={onSearchChange}/>
             <Scroll>
                 <ErrorBoundry>

@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  tonyuno:
+    docker:
+      - image: circleci/alpine:3.15
+    steps:
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+  tonydos:
+    docker:
+      - image: circleci/alpine:3.15
+    steps:
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+  workflows:
+    version: 2
+    tony_uno_dos:
+      jobs:
+        - tonyuno
+        - tonydos
