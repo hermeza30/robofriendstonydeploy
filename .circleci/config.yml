@@ -18,6 +18,7 @@ jobs:
     docker:
       - image: circleci/node:8.9
     steps:
+      - checkout
       - run: echo 'npm test'
       - run: npm install
       - run: npm test
