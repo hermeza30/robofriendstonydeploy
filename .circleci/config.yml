@@ -1,26 +1,38 @@
 version: 2.1
 jobs:
-  tonyuno:
+  build:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/node:8.9
     steps:
       - run:
           name: The First Step
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-  tonydos:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
+            echo 'npm install'
       - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+          name: Dependencias
+          command: npm install
+      - run:
+          name: Instalando dependencias
+          command: CI=true npm run build
+  test:
+    docker:
+      - image: circleci/node:8.1
+    steps:
+      - run: echo 'npm test'
+      - run: npm install
+      - run: npm test
+  hithere:
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - checkout
+      - run: echo "Completado vieja"
 workflows:
   version: 2
-  tony_uno_dos:
+  build_test_lint:
     jobs:
-      - tonyuno
-      - tonydos
+      - build
+      - hithere
+      - test:
+        requires:
+          - hithere
